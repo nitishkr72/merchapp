@@ -1,0 +1,4 @@
+{
+    "prettier.vueIndentScriptAndStyle": false,
+    "editor.formatOnSave": true
+}
