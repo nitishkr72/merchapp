@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, Text, Image} from 'react-native';
-import {StripeProvider} from '@stripe/stripe-react-native';
+// import {StripeProvider} from '@stripe/stripe-react-native';
+import {HyperProvider} from 'react-native-hyperswitch';
 import CustomPaymentScreen from './CustomPaymentScreen';
 import PaymentScreen from './PaymentScreen';
 import {SvgUri} from 'react-native-svg';
@@ -37,13 +38,14 @@ function Home({navigation}) {
         backgroundColor: '#080416',
         padding: 10,
       }}>
-      <StripeProvider
+      {/* <StripeProvider
         publishableKey={
           'pk_test_51KP0OALGEyT9T908Fv0PuwhRMQ2N9sWsrwZQS5hvTan6m6e73Bsv42DyTQwiw63jlluM1tvzeemOrXlE1AvmKY3D00R0yeN1my'
         }
         merchantIdentifier="merchant.identifier" // required for Apple Pay
         urlScheme="https://www.google.com/" // required for 3D Secure and bank redirects
-      >
+      > */}
+      <HyperProvider publishableKey={'3b33cd9404234113804aa1accaabe22f'}>
         <Image
           style={{
             width: 100 + '%',
@@ -75,7 +77,8 @@ function Home({navigation}) {
         />
         <CustomPaymentScreen />
         {/* <PaymentScreen /> */}
-      </StripeProvider>
+        {/* </StripeProvider> */}
+      </HyperProvider>
     </View>
   );
 }

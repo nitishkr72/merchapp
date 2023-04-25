@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {Alert, Button, Platform, Text, View} from 'react-native';
 
-import {
-  CardField,
-  useStripe,
-  useConfirmPayment,
-} from '@stripe/stripe-react-native';
+// import {
+//   CardField,
+//   useStripe,
+//   useConfirmPayment,
+// } from '@stripe/stripe-react-native';
+import {useHyper} from 'react-native-hyperswitch';
 import {confirmPayment as confirmPayment1} from '@stripe/stripe-react-native';
 const fetchPaymentParams = async () => {
   const response = await fetch(

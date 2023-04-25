@@ -12,12 +12,15 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@juspay-tech/hyperswitch-node": "^1.0.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "@stripe/stripe-react-native": "^0.22.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "react": "18.1.0",
-    "react-native": "0.70.6",
+    "react": "^18.2.0",
+    "react-native": "^0.71.7",
+    "react-native-hyperswitch": "/Users/altaf.raja.ext/Desktop/Hyperswitch/HyperSwitch13/orca-android/react-native-hyperswitch",
     "react-native-safe-area-context": "^4.5.1",
     "react-native-screens": "^3.20.0",
     "react-native-svg": "^13.9.0",

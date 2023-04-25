@@ -8,8 +8,8 @@ import {
   View,
 } from 'react-native';
 
-import {useStripe} from '@stripe/stripe-react-native';
-
+// import {useStripe} from '@stripe/stripe-react-native';
+import {useHyper} from 'react-native-hyperswitch';
 const Counter = ({setPrice}) => {
   const [counter, setCounter] = useState(1);
   const priveVal = 5;
@@ -82,7 +82,7 @@ const Counter = ({setPrice}) => {
     </View>
   );
 };
-const fetchPaymentParams = async amount => {
+const fetchPaymentParams = async () => {
   const response = await fetch(
     Platform.OS == 'ios'
       ? `http://localhost:4242/create-payment-intent`
@@ -92,7 +92,7 @@ const fetchPaymentParams = async amount => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({items: [{id: 'xl-tshirt'}], amount: amount}),
+      body: JSON.stringify({items: [{id: 'xl-tshirt'}]}),
     },
   );
   const val = await response.json();
@@ -102,22 +102,54 @@ const fetchPaymentParams = async amount => {
 const PaymentScreen = () => {
   const [price, setPrice] = useState(true);
   const [loading, setLoading] = useState(true);
-  const {initPaymentSheet, presentPaymentSheet} = useStripe();
+  const {initPaymentSheet, presentPaymentSheet} = useHyper();
 
-  const initializePaymentSheet = async amount => {
+  const initializePaymentSheet = async () => {
     setLoading(true);
-    const {clientSecret, ephemeralKey, customer} = await fetchPaymentParams(
-      amount,
-    );
-    console.log('clientSecret', clientSecret, ephemeralKey, customer);
+    // const {clientSecret, ephemeralKey, customer} = await fetchPaymentParams(
+    //   amount,
+    // );
+    const {clientSecret} = await fetchPaymentParams();
+    // console.log('clientSecret', clientSecret, ephemeralKey, customer);
+    const customAppearance = {
+      colors: {
+        light: {
+          // primary: '#00FF00',
+          // background: '#00FF00',
+          // componentBackground: '#0000FF',
+          // componentBorder: '#ff0000',
+          // secondaryText: '#00FF00',
+          // componentText: '#00FF00',
+          // placeholderText: '#0000FF',
+        },
+      },
+      shapes: {
+        borderRadius: 25,
+        borderWidth: 1,
+      },
+      primaryButton: {
+        shapes: {
+          borderRadius: 30,
+          borderWidth: 2,
+        },
+        colors: {
+          light: {
+            background: '#00FFFF',
+            text: '#0000FF',
+            border: '#FF0000',
+          },
+        },
+      },
+    };
     const {error} = await initPaymentSheet({
-      merchantDisplayName: 'Example, Inc.',
-      customerId: customer,
-      customerEphemeralKeySecret: ephemeralKey,
+      // merchantDisplayName: 'Example, Inc.',
+      // customerId: customer,
+      // customerEphemeralKeySecret: ephemeralKey,
       paymentIntentClientSecret: clientSecret,
+      appearance: customAppearance,
       // Set `allowsDelayedPaymentMethods` to true if your business can handle payment
       //methods that complete payment after a delay, like SEPA Debit and Sofort.
-      allowsDelayedPaymentMethods: true,
+      // allowsDelayedPaymentMethods: true,
       defaultBillingDetails: {
         name: 'Jane Doe',
         email: 'jenny.rosen@example.com',
@@ -130,8 +162,8 @@ const PaymentScreen = () => {
     }
   };
   useEffect(() => {
-    initializePaymentSheet(price);
-  }, [price]);
+    initializePaymentSheet();
+  }, []);
   const openPaymentSheet = async () => {
     const {error} = await presentPaymentSheet();
     if (error) {

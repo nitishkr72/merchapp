@@ -1,40 +1,80 @@
 const express = require('express');
 const app = express();
-const stripe = require('stripe')(
-  'sk_test_51KP0OALGEyT9T908osoVeWhMnrKSg6YibXTA84rLY5gGWvahr3uHZhAjKGXFicuNgPbZv2uYhIiylKsDHpKBcNuz00da02MYkB',
+const { resolve } = require('path');
+
+// Replace if using a different env file or config
+const env = require('dotenv').config({ path: './.env' });
+app.use(express.static(process.env.STATIC_DIR));
+app.get('/', (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + '/index.html');
+  res.sendFile(path);
+});
+
+// replace the test api key with your hyperswitch api key
+const hyper = require('@juspay-tech/hyperswitch-node')(
+  process.env.HYPERSWITCH_SECRET_KEY
 );
 
-app.use(express.static('.'));
-app.use(express.json());
+app.get('/config', (req, res) => {
+  res.send({
+    publishableKey: process.env.HYPERSWITCH_PUBLISHABLE_KEY,
+  });
+});
 
-// An endpoint for your checkout
 app.post('/create-payment-intent', async (req, res) => {
-  // Create or retrieve the Stripe Customer object associated with your user.
-  let customer = await stripe.customers.create(); // This example just creates a new Customer every time
-  // Create an ephemeral key for the Customer; this allows the app to display saved payment methods and save new ones
-  const ephemeralKey = await stripe.ephemeralKeys.create(
-    {customer: customer.id},
-    {apiVersion: '2020-08-27'},
-  );
-
-  // const {items} = req.body;
-  // Create a PaymentIntent with the payment amount, currency, and customer
   try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: req.body.amount * 100,
-      currency: 'usd',
-      customer: customer.id,
-      automatic_payment_methods: {
-        enabled: true,
+    const paymentIntent = await hyper.paymentIntents.create({
+      currency: 'USD',
+      amount: 2999,
+      confirm: false,
+      capture_method: "automatic",
+      authentication_type: "no_three_ds",
+      customer_id: "StripeCustomer",
+      shipping: {
+          address: {
+              line1: "1467",
+              line2: "Harrison Street",
+              line3: "Harrison Street",
+              city: "San Fransico",
+              state: "California",
+              zip: "94122",
+              country: "US",
+              first_name: "joseph",
+              last_name: "Doe"
+          },
+          phone: {
+              number: "8056594427",
+              country_code: "+91"
+          }
       },
-      //payment_method_types: ['klarna'],
+      billing: {
+          address: {
+              line1: "1467",
+              line2: "Harrison Street",
+              line3: "Harrison Street",
+              city: "San Fransico",
+              state: "California",
+              zip: "94122",
+              country: "US",
+              first_name: "joseph",
+              last_name: "Doe"
+          },
+          phone: {
+              number: "8056594427",
+              country_code: "+91"
+          }
+      },
+      metadata: {
+          order_details: {
+              product_name: "Apple iphone 15",
+              quantity: 1
+          }
+      }
     });
 
-    // Send the object keys to the client
+    // Send publishable key and PaymentIntent details to client
     res.send({
       clientSecret: paymentIntent.client_secret,
-      customer: customer.id,
-      ephemeralKey: ephemeralKey.secret,
     });
   } catch (err) {
     return res.status(400).send({
@@ -45,4 +85,6 @@ app.post('/create-payment-intent', async (req, res) => {
   }
 });
 
-app.listen(4242, () => console.log(`Node server listening on port !`));
+app.listen(4242, () =>
+  console.log(`Node server listening at http://localhost:4242`)
+);
