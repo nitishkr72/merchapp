@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 // import {useStripe} from '@stripe/stripe-react-native';
-import {useHyper} from 'react-native-hyperswitch';
+import {useHyper} from '@juspay-tech/react-native-hyperswitch';
 const Counter = ({setPrice}) => {
   const [counter, setCounter] = useState(1);
   const priveVal = 5;
@@ -33,7 +33,7 @@ const Counter = ({setPrice}) => {
           color: 'white',
         }}>
         Meet & Greet{'  '}
-        <Text style={{color: 'White', fontSize: 23}}>{priveVal}$</Text>
+        <Text style={{color: 'white', fontSize: 23}}>{priveVal}$</Text>
       </Text>
       <View
         style={{

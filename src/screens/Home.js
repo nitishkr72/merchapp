@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {View, Text, Image} from 'react-native';
 // import {StripeProvider} from '@stripe/stripe-react-native';
-import {HyperProvider} from 'react-native-hyperswitch';
+import {HyperProvider} from '@juspay-tech/react-native-hyperswitch';
 import CustomPaymentScreen from './CustomPaymentScreen';
 import PaymentScreen from './PaymentScreen';
 import {SvgUri} from 'react-native-svg';
@@ -45,13 +45,13 @@ function Home({navigation}) {
         merchantIdentifier="merchant.identifier" // required for Apple Pay
         urlScheme="https://www.google.com/" // required for 3D Secure and bank redirects
       > */}
-      <HyperProvider publishableKey={'3b33cd9404234113804aa1accaabe22f'}>
+      <HyperProvider publishableKey={'pk_snd_3b33cd9404234113804aa1accaabe22f'}>
         <Image
           style={{
             width: 100 + '%',
             height: 50 + '%',
             borderRadius: 10,
-            elevation: 4,
+            // elevation: 4,
           }}
           source={{
             uri: 'https://static.get-in.com/gallery/tablet_cover_20230419_193027_251081.png',

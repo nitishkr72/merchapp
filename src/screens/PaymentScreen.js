@@ -6,7 +6,7 @@ import {Alert, Button, Platform, Text, View} from 'react-native';
 //   useStripe,
 //   useConfirmPayment,
 // } from '@stripe/stripe-react-native';
-import {useHyper} from 'react-native-hyperswitch';
+import {useHyper} from '@juspay-tech/react-native-hyperswitch';
 import {confirmPayment as confirmPayment1} from '@stripe/stripe-react-native';
 const fetchPaymentParams = async () => {
   const response = await fetch(
