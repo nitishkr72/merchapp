@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3CC97C01D62BA7EE00391A54 /* libPods-StripeRN-StripeRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DD06545F830A590A114871 /* libPods-StripeRN-StripeRNTests.a */; };
+		33620838F1E715B462EB276C /* libPods-StripeRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A8895EF5B2A3E5995A1920 /* libPods-StripeRN.a */; };
+		68BEBA1B2EDD4A61757D4C4D /* libPods-StripeRN-StripeRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3CD2FB73D6EB19CBDA0A0E /* libPods-StripeRN-StripeRNTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		918DEBC2F2D7CF0FAB1823D7 /* libPods-StripeRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D80C42F7FDDA99314D118E /* libPods-StripeRN.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* StripeRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* StripeRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeRNTests.m; sourceTree = "<group>"; };
-		02F791DE68E237EDDAC87DEA /* Pods-StripeRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN.release.xcconfig"; path = "Target Support Files/Pods-StripeRN/Pods-StripeRN.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* StripeRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = StripeRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = StripeRN/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = StripeRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = StripeRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = StripeRN/main.m; sourceTree = "<group>"; };
-		641FC9E91B8B7F1550051582 /* Pods-StripeRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN.debug.xcconfig"; path = "Target Support Files/Pods-StripeRN/Pods-StripeRN.debug.xcconfig"; sourceTree = "<group>"; };
-		69D80C42F7FDDA99314D118E /* libPods-StripeRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C114F0F093D358A431C4DB /* Pods-StripeRN-StripeRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN-StripeRNTests.debug.xcconfig"; path = "Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C3CD2FB73D6EB19CBDA0A0E /* libPods-StripeRN-StripeRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeRN-StripeRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4555E7EF7142156F54BB6980 /* Pods-StripeRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN.release.xcconfig"; path = "Target Support Files/Pods-StripeRN/Pods-StripeRN.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = StripeRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		98DD06545F830A590A114871 /* libPods-StripeRN-StripeRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeRN-StripeRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C674BE9A34CEE65CF823CC34 /* Pods-StripeRN-StripeRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN-StripeRNTests.debug.xcconfig"; path = "Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB96899BB1A27032C611344D /* Pods-StripeRN-StripeRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN-StripeRNTests.release.xcconfig"; path = "Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B2D1706E27680861AB793A4 /* Pods-StripeRN-StripeRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN-StripeRNTests.release.xcconfig"; path = "Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3A8895EF5B2A3E5995A1920 /* libPods-StripeRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FE29CE72D0690E9F59AA24E2 /* Pods-StripeRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeRN.debug.xcconfig"; path = "Target Support Files/Pods-StripeRN/Pods-StripeRN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC97C01D62BA7EE00391A54 /* libPods-StripeRN-StripeRNTests.a in Frameworks */,
+				68BEBA1B2EDD4A61757D4C4D /* libPods-StripeRN-StripeRNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918DEBC2F2D7CF0FAB1823D7 /* libPods-StripeRN.a in Frameworks */,
+				33620838F1E715B462EB276C /* libPods-StripeRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				69D80C42F7FDDA99314D118E /* libPods-StripeRN.a */,
-				98DD06545F830A590A114871 /* libPods-StripeRN-StripeRNTests.a */,
+				C3A8895EF5B2A3E5995A1920 /* libPods-StripeRN.a */,
+				3C3CD2FB73D6EB19CBDA0A0E /* libPods-StripeRN-StripeRNTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				641FC9E91B8B7F1550051582 /* Pods-StripeRN.debug.xcconfig */,
-				02F791DE68E237EDDAC87DEA /* Pods-StripeRN.release.xcconfig */,
-				C674BE9A34CEE65CF823CC34 /* Pods-StripeRN-StripeRNTests.debug.xcconfig */,
-				EB96899BB1A27032C611344D /* Pods-StripeRN-StripeRNTests.release.xcconfig */,
+				FE29CE72D0690E9F59AA24E2 /* Pods-StripeRN.debug.xcconfig */,
+				4555E7EF7142156F54BB6980 /* Pods-StripeRN.release.xcconfig */,
+				19C114F0F093D358A431C4DB /* Pods-StripeRN-StripeRNTests.debug.xcconfig */,
+				9B2D1706E27680861AB793A4 /* Pods-StripeRN-StripeRNTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "StripeRNTests" */;
 			buildPhases = (
-				7B327392116222D7CF6736AF /* [CP] Check Pods Manifest.lock */,
+				853F353BF1DE0DDC14CD5850 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				48C747BE44113605B996A714 /* [CP] Embed Pods Frameworks */,
-				23B29B5FD0C37CD38DF704DE /* [CP] Copy Pods Resources */,
+				82F918B19C60B21D02220559 /* [CP] Embed Pods Frameworks */,
+				E754DEF74D24384A97CDCD37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "StripeRN" */;
 			buildPhases = (
-				4337912CCF4DE36C1336948A /* [CP] Check Pods Manifest.lock */,
+				0B9CA4806B8D0856BFADB46D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				31E54B17596C3E5C60C32B60 /* [CP] Embed Pods Frameworks */,
-				B52B11CE2EBB2D7DB8231CEC /* [CP] Copy Pods Resources */,
+				245AB5E1E828D020BA8BEE34 /* [CP] Embed Pods Frameworks */,
+				593ABD74718FA03C2F111724 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,41 +266,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		23B29B5FD0C37CD38DF704DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31E54B17596C3E5C60C32B60 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4337912CCF4DE36C1336948A /* [CP] Check Pods Manifest.lock */ = {
+		0B9CA4806B8D0856BFADB46D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +288,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48C747BE44113605B996A714 /* [CP] Embed Pods Frameworks */ = {
+		245AB5E1E828D020BA8BEE34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		593ABD74718FA03C2F111724 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F918B19C60B21D02220559 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,7 +339,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B327392116222D7CF6736AF /* [CP] Check Pods Manifest.lock */ = {
+		853F353BF1DE0DDC14CD5850 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,21 +361,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B52B11CE2EBB2D7DB8231CEC /* [CP] Copy Pods Resources */ = {
+		E754DEF74D24384A97CDCD37 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN/Pods-StripeRN-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StripeRN-StripeRNTests/Pods-StripeRN-StripeRNTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -430,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C674BE9A34CEE65CF823CC34 /* Pods-StripeRN-StripeRNTests.debug.xcconfig */;
+			baseConfigurationReference = 19C114F0F093D358A431C4DB /* Pods-StripeRN-StripeRNTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB96899BB1A27032C611344D /* Pods-StripeRN-StripeRNTests.release.xcconfig */;
+			baseConfigurationReference = 9B2D1706E27680861AB793A4 /* Pods-StripeRN-StripeRNTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 641FC9E91B8B7F1550051582 /* Pods-StripeRN.debug.xcconfig */;
+			baseConfigurationReference = FE29CE72D0690E9F59AA24E2 /* Pods-StripeRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -507,7 +507,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02F791DE68E237EDDAC87DEA /* Pods-StripeRN.release.xcconfig */;
+			baseConfigurationReference = 4555E7EF7142156F54BB6980 /* Pods-StripeRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

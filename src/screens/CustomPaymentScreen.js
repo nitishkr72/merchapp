@@ -84,18 +84,26 @@ const Counter = ({setPrice}) => {
 };
 const fetchPaymentParams = async () => {
   const response = await fetch(
-    Platform.OS == 'ios'
-      ? `http://localhost:4242/create-payment-intent`
-      : `http://10.0.2.2:4242/create-payment-intent`,
+    `https://u4kkpaenwc.execute-api.ap-south-1.amazonaws.com/default/create-payment-intent`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({items: [{id: 'xl-tshirt'}]}),
+      body: JSON.stringify({
+        amount: 6540,
+        currency: 'USD',
+        confirm: false,
+        authentication_type: 'no_three_ds',
+        customer_id: 'SaveCard',
+        capture_method: 'automatic',
+      }),
     },
   );
+
   const val = await response.json();
+  console.log('testtttttttttaashu.....->>>>', val);
+
   return val;
 };
 
@@ -146,7 +154,8 @@ const PaymentScreen = () => {
       // customerId: customer,
       // customerEphemeralKeySecret: ephemeralKey,
       paymentIntentClientSecret: clientSecret,
-      appearance: customAppearance,
+      //appearance: customAppearance,
+      style: 'AlwaysDark',
       // Set `allowsDelayedPaymentMethods` to true if your business can handle payment
       //methods that complete payment after a delay, like SEPA Debit and Sofort.
       // allowsDelayedPaymentMethods: true,
@@ -165,9 +174,11 @@ const PaymentScreen = () => {
     initializePaymentSheet();
   }, []);
   const openPaymentSheet = async () => {
-    const {error} = await presentPaymentSheet();
+    const val = await presentPaymentSheet();
+    console.log('val---->', val);
+    const {error} = val;
     if (error) {
-      Alert.alert(`Error code: ${error.code}`, error.message);
+      Alert.alert(error.message);
     } else {
       Alert.alert('Success', 'Your order is confirmed!');
     }

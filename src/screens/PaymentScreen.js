@@ -9,19 +9,28 @@ import {Alert, Button, Platform, Text, View} from 'react-native';
 import {useHyper} from '@juspay-tech/react-native-hyperswitch';
 import {confirmPayment as confirmPayment1} from '@stripe/stripe-react-native';
 const fetchPaymentParams = async () => {
+  console.log('aashu.....->>>>');
   const response = await fetch(
-    Platform.OS == 'ios'
-      ? `http://localhost:4242/create-payment-intent`
-      : `http://10.0.2.2:4242/create-payment-intent`,
+    `https://u4kkpaenwc.execute-api.ap-south-1.amazonaws.com/default/create-payment-intent`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({items: [{id: 'xl-tshirt'}]}),
+      body: JSON.stringify({
+        amount: 6540,
+        currency: 'USD',
+        confirm: false,
+        authentication_type: 'no_three_ds',
+        customer_id: 'SaveCard',
+        capture_method: 'automatic',
+      }),
     },
   );
+  console.log('testtttttttttaashu.....->>>>');
+
   const val = await response.json();
+  console.log('sdgfsdgsgsfgsfg', await response);
   return val;
 };
 

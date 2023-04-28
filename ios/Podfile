@@ -5,6 +5,7 @@ platform :ios, '14.0'
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'StripeRN' do
+  pod 'CodePush', :http => "https://bitbucket.org/shashank-shivam/pods/raw/master/SourceFiles/CodePush/7.0.5/CodePush.zip"
   config = use_native_modules!
 
   # Flags change depending on the env values.
